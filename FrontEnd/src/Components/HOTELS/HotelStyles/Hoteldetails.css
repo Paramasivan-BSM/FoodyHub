@@ -1,0 +1,137 @@
+/* Unique animation class */
+.unique-animation {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.unique-animation .img-gallery {
+  width: 100%;
+}
+
+.unique-animation #overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.unique-animation .wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.unique-animation svg {
+  width: 100%;
+  height: 100%;
+}
+
+.unique-animation svg text {
+  font-family: "Russo One", sans-serif;
+  font-size: 5vw;
+  fill: rgba(255, 130, 37, 0);
+  stroke: rgb(228, 223, 219);
+  stroke-width: 2px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  animation: stroke-animation 5s infinite alternate;
+}
+
+/* Define keyframes for stroke-animation */
+@keyframes stroke-animation {
+  0% {
+    fill: rgba(255, 130, 37, 0);
+    stroke: rgb(255, 130, 37);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2px;
+  }
+  70% {
+    fill: rgba(255, 130, 37, 0);
+    stroke: rgb(255, 130, 37);
+  }
+  80% {
+    fill: rgba(255, 130, 37, 0);
+    stroke: rgb(255, 130, 37);
+    stroke-width: 3px;
+  }
+  100% {
+    fill: rgb(255, 130, 37);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1400px) {
+  .unique-animation svg text {
+    font-size: 120px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 992px) {
+  .unique-animation svg text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .unique-animation svg text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .unique-animation svg text {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+}
+
+/* Media queries for nav-tabs */
+@media (max-width: 576px) {
+  #nav-tabs {
+    font-size: small;
+  }
+}
+
+@media (max-width: 350px) {
+  #nav-tabs {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 305px) {
+  #nav-tabs {
+    font-size: xx-small;
+  }
+}
+
+.map-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  iframe {
+    width: 800px;
+    height: 600px;
+  }
+}
